@@ -23,10 +23,23 @@
             </div>
           </div>
         </div>
-        <div>
-          <input class="search" type="text" placeholder="I'm looking for..." />
+        <div class="search-container">
+          <input class="search" type="text" placeholder="I'm looking for..." (keydown)="search($event)" />
+          <div class="recommendations">
+            <div *ngFor="let recommendation of recommendations" hidden>
+              <p>{{ recommendation }}</p>
+            </div>
+          </div>
         </div>
+        <div class="location-container">
+          <input class="location" type="text" placeholder="location" (keydown)="search($event)" />
+        </div>
+        <div class="ask-container">
+        <img />
+        <div>Ask for Recs</div>
       </div>
+      </div>
+      
 
     </div>
   </div>

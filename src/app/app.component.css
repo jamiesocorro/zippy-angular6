@@ -47,7 +47,6 @@
 .details-container {
     margin: 20px;
     display: flex;
-    align-items: center;
     height: calc(100% - 100px);
 }
 
@@ -68,11 +67,53 @@ h1 {
     border-radius: 15px;
 }
 
+.search-container {
+    position: relative;
+}
+
+.location,
 .search {
     border-radius: 20px;
-    width: 300px;
+    width: 100%;
     padding: 10px;
     border: none;
+}
+
+.location {
+    margin-top: 20px;
+}
+
+.recommendations {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    box-shadow: 1px 1px 5px 0px #ccc;
+}
+
+.search,
+.location,
+.bird-message {
+    box-shadow: 0px 1px 5px 0px #ccc;
+}
+
+.ask-container {
+    background-color: #3F51B5;
+    border-radius: 20px;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    margin-left: auto;
+    display: flex;
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.recommendations[hidden] {
+    display: none;
 }
 
 @media (min-width: 411px) {
