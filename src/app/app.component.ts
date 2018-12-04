@@ -12,9 +12,11 @@ export class AppComponent {
   position: string;
 
   recommendations = [];
+  recommendationsFiltered = [];
 
   constructor() {
     this.recommendations = ['Hairdresser', 'Plumber', 'UX Designer', 'Frontend Developer', 'Digital Marketer'];
+    this.recommendationsFiltered = this.recommendations;
     this.isLocation = false;
     this.isSearch = false;
   }
@@ -29,13 +31,16 @@ export class AppComponent {
   }
 
   search($event) {
-    let q = $event.key;
+    let q = $event.target.value + $event.key;
 
     var recommendations = this.recommendations.filter(function (recommendation) {
-      return recommendation.includes(q);
+      return recommendation.toString().toLowerCase().includes(q.toString().toLowerCase());
     });
 
-    this.recommendations = recommendations;
+    if(recommendations.length === 0)
+      recommendations = ['No Result'];
+
+    this.recommendationsFiltered = recommendations;
 
   }
 

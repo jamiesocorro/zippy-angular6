@@ -9,7 +9,7 @@
       <div class="menu-btn"></div>
     </div>
     <div class="details-container">      
-      <div class="details">        
+      <div class="details">                
         <div class="title">
           <h1>Recommendations.</h1>
           <div class="sub-title">
@@ -28,10 +28,9 @@
           </div>
         </div>
         <div class="search-container">
-          <input class="search" type="text" placeholder="I'm looking for..." (keydown)="search($event)" [(ngModel)]="position" (click)="showSearch()"
-          />
+          <input class="search" type="text" placeholder="I'm looking for..." (keypress)="search($event)" [(ngModel)]="position" (click)="showSearch()"/>
           <div class="recommendations" [hidden]="!isSearch">
-            <div class="item" *ngFor="let recommendation of recommendations">
+            <div class="item" *ngFor="let recommendation of recommendationsFiltered">
               <p (click)="chooseRecommendation(recommendation)">{{ recommendation }}</p>
             </div>
           </div>
