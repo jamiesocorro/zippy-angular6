@@ -28,7 +28,7 @@
           </div>
         </div>
         <div class="search-container">
-          <input class="search" type="text" placeholder="I'm looking for..." (keypress)="search($event)" [(ngModel)]="position" (click)="showSearch()"/>
+          <input class="search" type="text" placeholder="I'm looking for..." (keypress)="search($event); showSearch()" [(ngModel)]="position" (click)="showSearch()"/>
           <div class="recommendations" [hidden]="!isSearch">
             <div class="item" *ngFor="let recommendation of recommendationsFiltered">
               <p (click)="chooseRecommendation(recommendation)">{{ recommendation }}</p>
