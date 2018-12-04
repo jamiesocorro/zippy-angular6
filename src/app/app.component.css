@@ -35,6 +35,12 @@ h1 {
     display: flex;
 }
 
+.star-image {
+    background-image: url('../assets/star-background.jpg');
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
 .started-btn {
     border: 1px solid #3a2d56;
     color: #74639b;
@@ -80,11 +86,19 @@ h1 {
     color: #74639b;
 }
 
+.man-image,
 .bird-image {
     height: 30px;
     padding: 10px;
     background-color: white;
     border-radius: 30px;
+}
+
+.star-image {
+    height: 100px;
+}
+.man-image {
+    height: 50px !important;
 }
 
 .location-container {

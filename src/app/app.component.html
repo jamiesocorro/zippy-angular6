@@ -8,15 +8,15 @@
       <div class="login-btn">Log in</div>
       <div class="menu-btn"></div>
     </div>
-    <div class="details-container">
-      <div class="details">
+    <div class="details-container">      
+      <div class="details">        
         <div class="title">
           <h1>Recommendations.</h1>
           <div class="sub-title">
             <h2 class="green marg-right-10">|</h2>
             <h2 class="violet">People you need from people you trust.</h2>
           </div>
-          
+
         </div>
         <div>
           <div class="bird-message-container">
@@ -28,9 +28,10 @@
           </div>
         </div>
         <div class="search-container">
-          <input class="search" type="text" placeholder="I'm looking for..." (keydown)="search($event)" [(ngModel)]="position" (click)="showSearch()" />
+          <input class="search" type="text" placeholder="I'm looking for..." (keydown)="search($event)" [(ngModel)]="position" (click)="showSearch()"
+          />
           <div class="recommendations" [hidden]="!isSearch">
-            <div class="item" *ngFor="let recommendation of recommendations" >
+            <div class="item" *ngFor="let recommendation of recommendations">
               <p (click)="chooseRecommendation(recommendation)">{{ recommendation }}</p>
             </div>
           </div>
@@ -50,6 +51,10 @@
         <div class="ask-container">
           <img class="star-logo" src="../assets/star-logo.jpg">
           <div class="">Ask for Recs</div>
+        </div>
+
+        <div>
+          <img class="man-image" src="../assets/man.jpg">
         </div>
       </div>
 
